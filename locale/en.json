@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Local Wispr",
+    "description": "Standalone voice input for the composer: click the microphone, record, and the transcript from this machine's Whisper large-v3-turbo (pi-voice-board gateway, 127.0.0.1:8813) is inserted into the draft. Self-contained — no experimental voice stack, no browser speech API, no model downloads."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@local/dsh-local-wispr",
+  "version": "2.0.1",
+  "description": "Local Wispr — standalone voice input for the DeepSeek Harness composer: record in the browser, transcribe through the Whisper large-v3-turbo already running on this machine (pi-voice-board, 127.0.0.1:8813), insert the transcript into the draft. No experimental voice stack, no browser speech API, no downloads.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "icon": "icon.svg",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/schemastery": "~3.19.0"
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "voice-input",
+    "whisper",
+    "speech-to-text"
+  ]
+}

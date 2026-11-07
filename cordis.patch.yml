@@ -1,0 +1,7 @@
+# Local Wispr bundle patch — one standalone row; no experimental voice stack.
+- insert:
+    - id: local-wispr
+      name: '@local/dsh-local-wispr'
+      config:
+        endpoint: http://127.0.0.1:8813
+        lang: ko
